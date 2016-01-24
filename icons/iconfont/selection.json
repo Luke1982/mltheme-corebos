@@ -1,0 +1,136 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M833.427 138.598l67.891 67.872-678.72 678.912-67.891-67.872 678.72-678.912z",
+					"M154.551 206.634l67.862-67.901 679.008 678.624-67.862 67.901-679.008-678.624z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"grid": 0,
+				"tags": [
+					"close"
+				]
+			},
+			"attrs": [],
+			"properties": {
+				"order": 7,
+				"id": 4,
+				"prevSize": 32,
+				"code": 59651,
+				"name": "close"
+			},
+			"setIdx": 0,
+			"setId": 1,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M956.032 882.432l-370.368-321.024c50.784-54.176 82.048-126.848 82.048-206.944 0-167.424-135.712-303.168-303.168-303.168s-303.168 135.744-303.168 303.168 135.744 303.168 303.168 303.168c69.856 0 134.016-23.872 185.28-63.584l322.496 372.096c7.264 8.416 19.648 8.832 27.488 0.992l57.152-57.184c7.904-7.872 7.488-20.256-0.928-27.52zM101.824 354.464c0-145.12 117.632-262.752 262.752-262.752s262.752 117.632 262.752 262.752-117.632 262.72-262.752 262.72-262.752-117.632-262.752-262.72z",
+					"M404.992 536.352c-122.784 0-222.336-99.552-222.336-222.336 0-51.072 17.408-98.016 46.368-135.552-52.704 40.704-86.784 104.288-86.784 176 0 122.784 99.52 222.336 222.336 222.336 71.712 0 135.296-34.080 175.968-86.784-37.568 28.928-84.48 46.336-135.552 46.336z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"grid": 0,
+				"tags": [
+					"search"
+				]
+			},
+			"attrs": [],
+			"properties": {
+				"order": 6,
+				"id": 3,
+				"prevSize": 32,
+				"code": 59650,
+				"name": "search"
+			},
+			"setIdx": 0,
+			"setId": 1,
+			"iconIdx": 1
+		},
+		{
+			"icon": {
+				"paths": [
+					"M928 320h-832l416 400z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"grid": 0,
+				"tags": [
+					"downarrow"
+				]
+			},
+			"attrs": [],
+			"properties": {
+				"order": 3,
+				"id": 2,
+				"prevSize": 32,
+				"code": 59648,
+				"name": "downarrow"
+			},
+			"setIdx": 0,
+			"setId": 1,
+			"iconIdx": 2
+		},
+		{
+			"icon": {
+				"paths": [
+					"M96 704h832l-416-400z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"grid": 0,
+				"tags": [
+					"uparrow"
+				]
+			},
+			"attrs": [],
+			"properties": {
+				"order": 2,
+				"id": 1,
+				"prevSize": 32,
+				"code": 59649,
+				"name": "uparrow"
+			},
+			"setIdx": 0,
+			"setId": 1,
+			"iconIdx": 3
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": true,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"embed": false
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 0,
+			"bgColor": 16777215,
+			"classSelector": ".icon"
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16
+	}
+}
