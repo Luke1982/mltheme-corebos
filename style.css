@@ -43,6 +43,10 @@ html {
 	-webkit-text-shadow: rgba(255,255,255,0.1) 0 0 1px;
 }
 
+a {
+   outline: 0;
+}
+
 .small {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 13px;
@@ -86,8 +90,35 @@ html {
 .moduleName {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 16px;
-	color: #33338c;
+	text-transform: uppercase;
+	border: 2px solid #0079B7;
+	border-radius: 3px;
+	text-align: center;
+	padding: 0 10px !important;
+	color: #0079B7;
+	background: white;
 	font-weight:bold;
+	transition: background 300ms ease, color 300ms ease;
+}
+
+.moduleName:hover {
+	background: #0079B7;
+}
+
+.moduleName:hover a {
+	color: white;	
+}
+
+.searchUIName .moduleName {
+	text-transform: normal;
+	border: 0;
+	color: black;
+	padding: 0;
+	background: none;
+}
+
+.searchUIName .moduleName:hover {
+	background: none;
 }
 
 .hdrNameBg {
@@ -369,6 +400,34 @@ a:hover {
 /* List View Table classes ends --------------------------------*/
 
 /* Detailed View classes starts +++++++++++++++++++++++ */
+
+.detailview_block_header td, .detailview_block_header td a {
+	background: rgb(60,60,60) !important;
+	padding: 10px;
+}
+
+/* The 'expand and collapse' arrow */
+.exp_coll_block img{
+	display: none;
+}
+
+.exp_coll_block:before {
+	font-family: "icomoon";
+	content:"\e901";
+	display: inline-block;
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+	color: white;
+	transform: rotate(180deg);
+	line-height: 16px;
+	transition: transform 200ms ease;
+}
+
+.inactivate:before {
+	transform: rotate(0deg);
+}
+
 .dvHeaderText{
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -383,11 +442,17 @@ a:hover {
 	border-bottom:1px solid #dedede;*/
 	padding:8px;
 	background: #0079B7 !important;
-	color: #000000;
+	color: white;
 }
 
 .dvInnerHeader a {
 	background: #0079B7 !important;
+}
+
+.detailview_table {
+	/*http://stackoverflow.com/questions/351058/space-between-two-rows-in-a-table*/
+	border-collapse:separate;
+	border-spacing: 0 5px;
 }
 
 .dvtSelectedCell {
@@ -463,22 +528,31 @@ a:hover {
 	padding: 0;
 }
 
+.detailview_row {
+	margin: 5px 0;
+}
+
 .dvtCellLabel, .cellLabel,.cellLabelnew{
-	background-color:#F7F7F7;
-	border-bottom:1px solid #DEDEDE;
+	background-color: white;
+	color: rgb(100,100,100);
+	/*border-bottom:1px solid #DEDEDE;
 	border-left:1px solid #DEDEDE;
 	border-right:1px solid #DEDEDE;
-	color:#545454;
-	padding-left:10px;
-	padding-right:10px;
+	color:#545454;*/
+	padding: 10px 8px;
+	/*padding-left:10px;
+	padding-right:10px;*/
 	white-space:nowrap;}
 
 .dvtCellInfo, .cellInfo {
-	padding-left:10px;
+	border: 2px solid rgb(230,230,230);
+	border-radius: 7px;
+	padding-left: 10px;
+	/*padding-left:10px;
 	padding-right:10px;
 	border-bottom:1px solid #dedede;
 	border-right:1px solid #dedede;
-	border-left:1px solid #dedede;
+	border-left:1px solid #dedede;*/
 }
 
 .rightMailMerge {
@@ -509,22 +583,38 @@ a:hover {
 
 .detailedViewTextBox {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 13px;
 	color: #000000;
-	border:1px solid #bababa;
-	padding-left:5px;
-	width:90%;
-	background-color:#ffffff;
+	/*border:1px solid #bababa;*/
+	/*padding-left:5px;*/
+	width:98%;
+	border: none;
+	margin: 0;
+	padding: 4px 0;
+	/*background-color:#ffffdd;*/
+    -webkit-animation: color-change 1s infinite;
+    -moz-animation: color-change 1s infinite;
+    -o-animation: color-change 1s infinite;
+    -ms-animation: color-change 1s infinite;
+    animation: color-change 1s infinite;
 }
 
 .detailedViewTextBoxOn {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 13px;
 	color: #000000;
-	border:1px solid #bababa;
-	padding-left:5px;
-	width:90%;
-	background-color:#ffffdd;
+	/*border:1px solid #bababa;*/
+	/*padding-left:5px;*/
+	width:98%;
+	border: none;
+	margin: 0;
+	padding: 4px 0;
+	/*background-color:#ffffdd;*/
+    -webkit-animation: color-change 1s infinite;
+    -moz-animation: color-change 1s infinite;
+    -o-animation: color-change 1s infinite;
+    -ms-animation: color-change 1s infinite;
+    animation: color-change 1s infinite;
 }
 
 .advSearch {
@@ -2132,17 +2222,39 @@ ul {
 }
 
 .save{
-	background-color:green;
+	/* MajorLabel style additions */
+	cursor: pointer;
+	padding: 6px 9px;
+	border: none;
+	border-radius: 5px;
+	background-color: #00b71e;
+	-webkit-box-shadow: 0px 4px 0px 0px #007113;
+	-moz-box-shadow: 0px 4px 0px 0px #007113;
+	box-shadow: 0px 4px 0px 0px #007113;
+	margin: 5px 0;
+	/* MajorLabel style additions */
+	/*background-color:green;*/
 	color:#fff;
 	font-weight:bold;
-	background-image: url(images/buttongreen.png);
+	/*background-image: url(images/buttongreen.png);*/
 }
 
 .cancel {
-	background-color: orange;
+	/* MajorLabel style additions */
+	cursor: pointer;
+	padding: 6px 9px;
+	border: none;
+	border-radius: 5px;
+	background-color: #caab00;
+	-webkit-box-shadow: 0px 4px 0px 0px #a78d00;
+	-moz-box-shadow: 0px 4px 0px 0px #a78d00;
+	box-shadow: 0px 4px 0px 0px #a78d00;
+	margin: 5px 0;
+	/* MajorLabel style additions */
+	/*background-color: orange;*/
 	color:#fff;
 	font-weight:bold;
-	background-image: url(images/buttonorange.png);
+	/*background-image: url(images/buttonorange.png);*/
 }
 
 .inactive{
@@ -3252,4 +3364,31 @@ label:before {
     width:20px; height:20px;
     background:#f8f8f8;
     position:absolute;
+}
+
+/*============= KEYFRAMES ================*/
+@-webkit-keyframes color-change {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
+}
+@-moz-keyframes color-change {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
+}
+@-ms-keyframes color-change {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
+}
+@-o-keyframes color-change {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
+}
+@keyframes color-change {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
 }
