@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:    url('fonts/icomoon.eot?f95my1');
-    src:    url('fonts/icomoon.eot?f95my1#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?f95my1') format('truetype'),
-        url('fonts/icomoon.woff?f95my1') format('woff'),
-        url('fonts/icomoon.svg?f95my1#icomoon') format('svg');
+    src:    url('fonts/icomoon.eot?p7mm7d');
+    src:    url('fonts/icomoon.eot?p7mm7d#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?p7mm7d') format('truetype'),
+        url('fonts/icomoon.woff?p7mm7d') format('woff'),
+        url('fonts/icomoon.svg?p7mm7d#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -78,6 +78,9 @@
 .icon-uparrow:before {
     content: "\e901";
 }
+.icon-pijlomhoog:before {
+    content: "\e906";
+}
 .icon-download:before {
     content: "\e91c";
 }
@@ -89,5 +92,17 @@
 }
 .icon-cogs:before {
     content: "\e91e";
+}
+.icon-bin:before {
+    content: "\e902";
+}
+.icon-tree:before {
+    content: "\e903";
+}
+.icon-mail4:before {
+    content: "\e904";
+}
+.icon-file-word:before {
+    content: "\e905";
 }
 

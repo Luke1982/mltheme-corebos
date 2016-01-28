@@ -11,7 +11,7 @@
  ********************************************************************************/
 
 /* Import Open Sans font */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,400italic,600italic);
 
 /* Import icons */
 /* Currently available icons (use on "before"): */
@@ -19,13 +19,17 @@
 /* 	Down Arrow			: "\e900" 		*/
 /* 	Search				: "\e91b" 		*/
 /* 	Close				: "\e912" 		*/
-/* 	Calendar			: "\e902" 		*/
 /* 	Add					: "\e910" 		*/
 /* 	Chat				: "\e911" 		*/
 /* 	History				: "\e913" 		*/
 /* 	Import				: "\e91c" 		*/
 /* 	Export				: "\e91d" 		*/
 /* 	Settings			: "\e91e" 		*/
+/* 	Trash				: "\e902" 		*/
+/* 	Tree				: "\e903" 		*/
+/* 	mail				: "\e904" 		*/
+/* 	Wordfile			: "\e905" 		*/
+/* 	Empty up arrow		: "\e906" 		*/
 
 @font-face {
     font-family: 'icomoon';
@@ -91,13 +95,13 @@ a {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	text-transform: uppercase;
-	border: 2px solid #0079B7;
+	border: 1px solid #0079B7;
 	border-radius: 3px;
 	text-align: center;
 	padding: 0 10px !important;
 	color: #0079B7;
 	background: white;
-	font-weight:bold;
+	font-weight:300;
 	transition: background 300ms ease, color 300ms ease;
 }
 
@@ -257,7 +261,7 @@ a:hover {
 	font-size: 16px;
 	text-decoration:none;
 	color:#0070BA;
-	font-weight:bold;
+	/*font-weight:bold;*/
 }
 
 #showPanelTopLeft{visibility:hidden;}
@@ -267,9 +271,8 @@ a:hover {
 .hdrLink:hover {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 16px;
-	text-decoration:underline;
+	text-decoration:none;
 	color:#33338c;
-	font-weight:bold;
 }
 
 .searchBox {
@@ -401,9 +404,17 @@ a:hover {
 
 /* Detailed View classes starts +++++++++++++++++++++++ */
 
-.detailview_block_header td, .detailview_block_header td a {
-	background: rgb(60,60,60) !important;
+/* Related modules dropdown */
+#More_Information_Modules_List {
+	-webkit-box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+	box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+}
+
+.detailview_block_header td, .detailview_block_header td a, .detailview_inventory_header td{
+	background: #0079B7 !important;
 	padding: 10px;
+	text-transform: uppercase;
 }
 
 /* The 'expand and collapse' arrow */
@@ -542,7 +553,9 @@ a:hover {
 	padding: 10px 8px;
 	/*padding-left:10px;
 	padding-right:10px;*/
-	white-space:nowrap;}
+	white-space:nowrap;
+	font-weight: bold;
+}
 
 .dvtCellInfo, .cellInfo {
 	border: 2px solid rgb(230,230,230);
@@ -592,6 +605,9 @@ a:hover {
 	margin: 0;
 	padding: 4px 0;
 	/*background-color:#ffffdd;*/
+}
+
+.detailview_table .detailedViewTextBox, .detailview_table .detailedViewTextBoxOn{
     -webkit-animation: color-change 1s infinite;
     -moz-animation: color-change 1s infinite;
     -o-animation: color-change 1s infinite;
@@ -610,11 +626,112 @@ a:hover {
 	margin: 0;
 	padding: 4px 0;
 	/*background-color:#ffffdd;*/
-    -webkit-animation: color-change 1s infinite;
-    -moz-animation: color-change 1s infinite;
-    -o-animation: color-change 1s infinite;
-    -ms-animation: color-change 1s infinite;
-    animation: color-change 1s infinite;
+}
+
+/*----------- THE INVENTORY PART OF THE DETAIL VIEW -------------*/
+.detailview_inventory_table, .detailview_inventory_table td {
+	border-left: 0 !important;
+	border-right: 0 !important;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+	outline:0;
+	border-collapse: collapse;
+}
+
+.detailview_inventory_subheader, .detailview_inventory_subheader font {
+	background: rgb(60,60,60);
+	color: white !important;
+}
+
+.detailview_inventory_row {
+	border-top: 0 !important;
+	border-bottom: 1px solid rgb(220,220,220) !important;
+}
+
+.detailview_inventory_row:hover {
+	background: rgb(240,240,240);
+}
+
+.detailview_inventory_npricecell {
+	font-weight: bold;
+}
+
+.detailview_inventory_totals {
+	border: 0;
+}
+
+#detailview_inventory_subtotalrow {
+	background: rgb(230,230,230);	
+}
+
+#detailview_inventory_grandtotrow {
+	background: rgb(230,230,230);
+	font-weight: bold;
+}
+
+#detailview_inventory_grandtotrow td{
+	font-size: 15px !important;
+}
+
+/* The right sidebar */
+#detailview_right_sidebar {
+	border: none !important;
+}
+
+.detailview_actionlinks {
+	border-collapse:separate;
+	border-spacing: 0 5px;
+}
+
+.actionlink td {
+	padding: 8px !important;
+	background: rgb(230,230,230);
+	border-radius: 5px;
+	color: rgb(120,120,120);
+	font-weight: bold;
+}
+
+.actionlink td a:first-of-type {
+	display: inline-block;
+	width: 20%;
+	/*padding: 0 5px 8px 5px;*/
+	text-decoration: none;
+	color: rgb(120,120,120);
+	/*margin: 0 0 8px 0;*/
+}
+
+.actionlink td a:nth-of-type(2n) {
+	display: inline-block;
+	width: 75%;
+	vertical-align: top;
+	text-align: right;
+	text-decoration: none;
+	color: rgb(120,120,120);
+	/*margin: 0 0 8px 0;*/
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.actionlink td a:nth-of-type(2n):after {
+	display: inline-block;
+	font-family: "icomoon";
+	font-size: 16px;
+	line-height: 16px;
+	content: "\e906";
+	transform: rotate(90deg);
+	margin: 0 0 0 8px;
+}
+
+.actionlink_sendemail td a:first-of-type img {
+	display: none;
+}
+
+.actionlink_sendemail td a:first-of-type:before {
+	display: inline-block;
+	font-family: "icomoon";
+	font-size: 24px;
+	line-height: 24px;
+	content: "\e904";
 }
 
 .advSearch {
@@ -1810,6 +1927,18 @@ a.calMnu:Hover{
 
 /* End of Cal Year View */
 
+/* Activity Popups */
+#ActivityRemindercallback {
+	background: white;
+	-webkit-box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+	box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+}
+
+#ActivityRemindercallback div {
+	border: none !important;
+}
+
 /* Level 2 Menu Selected*/
 
 level2Sel{
@@ -2314,17 +2443,17 @@ textarea {
 
 /* Table Definitions */
 .crmTable {
-	border:1px solid #dadada;
+	/*border:1px solid #dadada;*/
 }
 
 .crmTableRow {
-	border-bottom:1px dotted #dadada;
-	border-right:1px dotted #dadada
+	/*border-bottom:1px dotted #dadada;
+	border-right:1px dotted #dadada*/
 }
 
 /* Inventory */
 .lineOnTop {
-	border-top:1px solid #999999;
+	/*border-top:1px solid #999999;*/
 }
 
 .discountUI{
@@ -2490,29 +2619,31 @@ a.customMnuSelected{
 
 /* Drop Down Menu */
 a.drop_down{
-	width:150px;
+	min-width:150px;
 	text-align:left;
+	padding:5px 8px 5px 8px;
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 13px;
 	line-height:20px;
 	font-weight:normal;
-	color:white;
-	background-color: #0079b7;
+	color:black;
+	background: white;
 	/*background-color:#fff;*/
-	padding:2px 5px 2px 5px;
 	/*border-top:1px solid #fafafa;
 	border-bottom:1px solid #d3d3d3;*/
 	display:block;
+	transition: background 300ms ease;
 }
 
 a.drop_down:Hover{
-	padding:2px 5px 2px 5px;
-	width:150px;
+	/*padding:5px 8px 5px 8px;*/
+	background: rgb(230,230,230);
+	/*width:150px;*/
 	text-align:left;
-	color:#0070BA;
+	/*color:#0070BA;*/
 	font-weight:normal;
-	text-decoration:underline;
-	background-color:#ffffcc;
+	text-decoration:none;
+	/*background-color:#ffffcc;*/
 }
 a.drop_downnew_parent{
 	background: rgb(60,60,60);
@@ -3248,16 +3379,17 @@ a.allMnu:Hover{
 	left:0px;
 	top:0px;
 	z-index:1000000001;
-	border-left:1px solid #d3d3d3;
+	border-bottom: 6px solid #0079B7;
+	/*border-left:1px solid #d3d3d3;
 	border-right:1px solid #d3d3d3;
-	border-bottom:1px solid #d3d3d3;
-	width:150px;
+	border-bottom:1px solid #d3d3d3;*/
+	/*width:150px;*/
 	display:none;
 	padding:0px;
 	text-align:left;
 	overflow-x:hidden;
 	overflow-y:hidden;
-	background-color:#ffffcc;
+	/*background-color:#ffffcc;*/
 	margin-top: 0px; /* added */
 }
 .searchBtn {
@@ -3336,34 +3468,6 @@ select {
     -moz-appearance:none;
     appearance:none;
     cursor:pointer;
-}
-
-/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    select {padding-right:18px}
-}
-
-label {position:relative}
-label:after {
-    content:'<>';
-    font:11px "Open Sans", monospace;
-    color:#aaa;
-    -webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    transform:rotate(90deg);
-    right:8px; top:2px;
-    padding:0 0 2px;
-    border-bottom:1px solid #ddd;
-    position:absolute;
-    pointer-events:none;
-}
-label:before {
-    content:'';
-    right:6px; top:0px;
-    width:20px; height:20px;
-    background:#f8f8f8;
-    position:absolute;
 }
 
 /*============= KEYFRAMES ================*/
