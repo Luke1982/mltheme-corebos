@@ -20,6 +20,7 @@
 /* 	Search				: "\e91b" 		*/
 /* 	Close				: "\e912" 		*/
 /* 	Add					: "\e910" 		*/
+/* 	New file (new Add)	: "\e908" 		*/
 /* 	Chat				: "\e911" 		*/
 /* 	History				: "\e913" 		*/
 /* 	Import				: "\e91c" 		*/
@@ -30,6 +31,8 @@
 /* 	mail				: "\e904" 		*/
 /* 	Wordfile			: "\e905" 		*/
 /* 	Empty up arrow		: "\e906" 		*/
+/* 	Calendar			: "\e907" 		*/
+/* 	Paperclip			: "\e909" 		*/
 
 @font-face {
     font-family: 'icomoon';
@@ -245,6 +248,7 @@ a {
 
 .showPanelBg {
 	/*background:url(images/homePageSeperator.gif) no-repeat;*/
+	padding: 10px 0 0 0 !important;
 }
 
 a {
@@ -1606,27 +1610,40 @@ a.alpha:Hover{
 /* End of Home Page */
 
 /* The Listview Button list */
+#LB_Buttonlist {
+	padding: 5px 0;
+	background: rgb(245,245,245);
+	border-bottom: 1px solid rgb(170,170,170);
+}
 
-.LB_Button a:before {
+.LB_Button {
+	padding: 0 5px !important;
+}
+
+.LB_Divider {
+	width: 0 !important;
+}
+
+.LB_Button a, .LB_Button span {
+	display: inline-block;
+	height: 28px;
+}
+
+.LB_Button a:before, .LB_Button span:before {
     font-family: 'icomoon' !important;
 	display: inline-block;
 	font-size: 28px;
     speak: none;
-	color: rgb(60,60,60);
+	color: rgb(110,110,110);
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+    cursor: pointer;
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	transform: scale3d(1,1,1);
-	transition: transform 200ms ease;
-}
-
-.LB_Button:hover a:before {
-	transform: scale3d(1.08,1.08,1);
 }
 
 #LB_ClockButton, #LB_CalcButton {
@@ -1645,11 +1662,11 @@ a.alpha:Hover{
 }
 
 #LB_TrackButton img {
-	opacity: 0;
+	display: none;
 }
 
 #LB_AddButton a:before {
-	content: "\e910";
+	content: "\e908";
 }
 
 #LB_SearchButton a:before {
@@ -1657,15 +1674,15 @@ a.alpha:Hover{
 }
 
 #LB_CalButton a:before {
-	content: "\e902";
+	content: "\e907";
 }
 
 #LB_ChatButton a:before {
 	content: "\e911";
 }
 
-#LB_TrackButton:after {
-	content: "\e913";
+#LB_TrackImageWrapper:before {
+	content: "\e909";
 }
 
 #LB_ImportButton a:before {
@@ -2672,12 +2689,17 @@ a.drop_downnew_parent{
 	background-color:white;
 }
 
+.searchbreak {
+	display: none;
+}
+
 .searchUIBasic {
 	/*background-image:url(images/layerPopupBg.gif);
 	border:2px solid #a5b5ee;*/
 	box-sizing: border-box;
 	background: rgb(230,230,230);
-	margin-bottom: -2em;
+	margin-bottom: -0.1em;
+	width: 100% !important;
 }
 
 .searchUIAdv1{
