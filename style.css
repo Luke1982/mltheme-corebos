@@ -106,10 +106,12 @@ a {
 	background: white;
 	font-weight:300;
 	transition: background 300ms ease, color 300ms ease;
+	margin-left: 10px;
 }
 
 .moduleName:hover {
 	background: #0079B7;
+	color: white;
 }
 
 .moduleName:hover a {
@@ -415,6 +417,10 @@ a:hover {
 	box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
 }
 
+.detailview_wrapper_cell{
+	padding: 0 !important;
+}
+
 .detailview_block_header td, .detailview_block_header td a, .detailview_inventory_header td{
 	background: #0079B7 !important;
 	padding: 10px;
@@ -464,7 +470,7 @@ a:hover {
 	background: #0079B7 !important;
 }
 
-.detailview_table {
+.detailview_table, .createview_table {
 	/*http://stackoverflow.com/questions/351058/space-between-two-rows-in-a-table*/
 	border-collapse:separate;
 	border-spacing: 0 5px;
@@ -544,32 +550,37 @@ a:hover {
 }
 
 .detailview_row {
-	margin: 5px 0;
+	transform: translateX(-3px);
 }
 
 .dvtCellLabel, .cellLabel,.cellLabelnew{
 	background-color: white;
-	color: rgb(100,100,100);
-	/*border-bottom:1px solid #DEDEDE;
-	border-left:1px solid #DEDEDE;
-	border-right:1px solid #DEDEDE;
-	color:#545454;*/
+	color: rgb(90,90,90);
 	padding: 10px 8px;
-	/*padding-left:10px;
-	padding-right:10px;*/
 	white-space:nowrap;
 	font-weight: bold;
+	background: rgb(235,235,235);
+	border-right: 3px solid #68b8e1;
+	/*border-left: 10px solid white;*/
+	border-radius: 7px 0 0 7px;
+	transform: translateX(5px);
 }
 
 .dvtCellInfo, .cellInfo {
-	border: 2px solid rgb(230,230,230);
-	border-radius: 7px;
+	border-top: 2px solid rgb(230,230,230);
+	border-right: 2px solid rgb(230,230,230);
+	border-bottom: 2px solid rgb(230,230,230);
+	border-radius: 0 7px 7px 0;
 	padding-left: 10px;
-	/*padding-left:10px;
-	padding-right:10px;
-	border-bottom:1px solid #dedede;
-	border-right:1px solid #dedede;
-	border-left:1px solid #dedede;*/
+}
+
+.commentCell {
+	border-top: none;
+	border-right: 2px solid rgb(230,230,230);
+	border-bottom: 2px solid rgb(230,230,230);
+	border-left: 2px solid rgb(230,230,230);
+	border-radius: 0 0 7px 7px;
+	padding: 0;
 }
 
 .rightMailMerge {
@@ -592,10 +603,14 @@ a:hover {
 
 .detailedViewHeader{
 
-	border:1px solid #DDDDDD;
+	/*border:1px solid #DDDDDD;*/
 	padding:12px;
-	background:  #dddcdd   url(images/inner.gif) bottom repeat-x;
-	color: #000000;
+	/*background:  #dddcdd   url(images/inner.gif) bottom repeat-x;*/
+	/*color: #000000;*/
+	background: #0079B7;
+	color: #fff;
+	font-weight: 800;
+	text-transform: uppercase;
 }
 
 .detailedViewTextBox {
@@ -1611,9 +1626,13 @@ a.alpha:Hover{
 
 /* The Listview Button list */
 #LB_Buttonlist {
-	padding: 5px 0;
+	padding: 5px 0 5px 0.5%;
+	/*border-top: 2px solid #005885;*/
 	background: rgb(245,245,245);
-	border-bottom: 1px solid rgb(170,170,170);
+	border-bottom: 3px solid #005885;
+	/*background: rgb(245,245,245);*/
+	/*background: #005885;*/
+	/*border-bottom: 1px solid rgb(170,170,170);*/
 }
 
 .LB_Button {
@@ -1626,15 +1645,21 @@ a.alpha:Hover{
 
 .LB_Button a, .LB_Button span {
 	display: inline-block;
-	height: 28px;
+	/*height: 28px;*/
 }
 
 .LB_Button a:before, .LB_Button span:before {
     font-family: 'icomoon' !important;
 	display: inline-block;
-	font-size: 28px;
+	height: 24px;
+	padding-top: 4px;
+	width: 28px;
+	font-size: 20px;
+	border: 1px solid #005885;
+	border-radius: 4px;
     speak: none;
-	color: rgb(110,110,110);
+	color: #005885;
+	text-align: center;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -1644,6 +1669,12 @@ a.alpha:Hover{
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background 200ms ease, color 100ms ease;
+}
+
+.LB_Button a:hover:before, .LB_Button span:hover:before {
+	background: #005885;
+	color: white;
 }
 
 #LB_ClockButton, #LB_CalcButton {
@@ -1657,7 +1688,8 @@ a.alpha:Hover{
 #LB_ChatButton a img,
 #LB_ImportButton a img,
 #LB_ExportButton a img,
-#LB_ModSettingsButton a img {
+#LB_ModSettingsButton a img,
+#LB_SearchButtonFaded {
 	display: none;
 }
 
@@ -1950,10 +1982,31 @@ a.calMnu:Hover{
 	-webkit-box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
 	-moz-box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
 	box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+	margin: 5px;
+	padding: 0 0 7px 0 !important;
 }
 
-#ActivityRemindercallback div {
+#ActivityRemindercallback div, #ActivityRemindercallback span {
 	border: none !important;
+	padding: 0 !important;
+	height: auto !important;
+}
+
+#ActivityRemindercallback div table tr:first-of-type {
+	background: #0079B7;
+	color: white;
+}
+
+#ActivityRemindercallback div table tr:first-of-type td {
+	padding: 5px 3px;
+}
+
+#ActivityRemindercallback div table tr:nth-of-type(2n) td hr{
+	display: none;
+}
+
+#ActivityRemindercallback div table font {
+	color: white !important;
 }
 
 /* Level 2 Menu Selected*/
@@ -2722,11 +2775,12 @@ a.drop_downnew_parent{
 	border-right:2px solid #a5b5ee;
 }
 
-.searchUIBasic  tbody tr:first-of-type td:last-of-type {
-	color: rgb(230,230,230);
+.closeX {
+	font-size: 0;
 }
 
-.searchUIBasic tbody tr:first-of-type td:last-of-type:before {
+/*.searchUIBasic tbody tr:first-of-type td:last-of-type:before {*/
+.closeX:before {
     font-family: 'icomoon' !important;
 	display: inline-block;
 	position: absolute;
