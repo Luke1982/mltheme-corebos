@@ -1779,6 +1779,11 @@ a.alpha:Hover{
 /* End Of All Menu */
 
 /* Calendar */
+#miniCal {
+	-webkit-box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);
+	box-shadow: 0px 5px 28px -10px rgba(0,0,0,0.8);	
+}
 .calHdr{
 	background-image:url(images/light-bg-cal.gif);
 	background-repeat:repeat-x;
