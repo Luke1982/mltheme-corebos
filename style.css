@@ -429,7 +429,7 @@ a:hover {
 
 /* The 'expand and collapse' arrow */
 .exp_coll_block img{
-	display: none;
+	display: none !important;
 }
 
 .exp_coll_block:before {
