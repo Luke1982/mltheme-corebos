@@ -35,6 +35,8 @@
 /* 	Paperclip			: "\e909" 		*/
 /* 	Action				: "\e90f" 		*/
 /*	Appointment			: "\e90a"		*/
+/*	Stopwatch			: "\e90b"		*/
+/*	SMS					: "\e90c"		*/
 
 @font-face {
     font-family: 'icomoon';
@@ -791,7 +793,9 @@ a:hover {
 	line-height: 24px;
 	height: 24px;
 }
-
+.actionlink_customlink td a:first-of-type:before {
+	content: "\e90f";
+}
 .actionlink_sendemail td a:first-of-type:before {
 	content: "\e904";
 }
@@ -801,8 +805,17 @@ a:hover {
 .actionlink_addtodo td a:first-of-type:before {
 	content: "\e90f";
 }
-.actionlink_customlink td a:first-of-type:before {
-	content: "\e90f";
+.actionlink_lbl_show_account_hierarchy td a:first-of-type:before {
+	content: "\e903";
+}
+.actionlink_lbl_add_note td a:first-of-type:before {
+	content: "\e913";
+}
+.actionlink_timecontrol td a:first-of-type:before {
+	content: "\e90b";
+}
+.actionlink_send_sms td a:first-of-type:before {
+	content: "\e90c";
 }
 
 .advSearch {
