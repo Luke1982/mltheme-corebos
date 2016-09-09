@@ -95,14 +95,7 @@ a {
 }
 
 .moduleName {
-/*	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	text-transform: uppercase;
-	border-radius: 3px;
-	text-align: center;*/
 	padding: 0 0 0 28px !important;
-/*	background: #0079B7;
-	font-weight:800;*/
 }
 
 .moduleName a {
