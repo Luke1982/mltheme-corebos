@@ -557,24 +557,24 @@ a:hover {
 	transform: translateX(-3px);
 }
 
-.dvtCellLabel, .cellLabel,.cellLabelnew{
+.dvtCellLabel, .cellLabel, .cellLabelnew{
 	background-color: white;
-	color: rgb(90,90,90);
+	color: rgb(30,30,30);
 	padding: 10px 8px;
 	white-space:nowrap;
 	font-weight: bold;
-	background: rgb(235,235,235);
+	background: rgb(240,240,240);
 	border-right: 3px solid #68b8e1;
 	/*border-left: 10px solid white;*/
-	border-radius: 7px 0 0 7px;
+	border-radius: 3px 0 0 3px;
 	transform: translateX(5px);
 }
 
 .dvtCellInfo, .cellInfo {
-	border-top: 2px solid rgb(230,230,230);
-	border-right: 2px solid rgb(230,230,230);
-	border-bottom: 2px solid rgb(230,230,230);
-	border-radius: 0 7px 7px 0;
+	border-top: 1px solid rgb(220,220,220);
+	border-right: 1px solid rgb(220,220,220);
+	border-bottom: 1px solid rgb(220,220,220);
+	border-radius: 0 3px 3px 0;
 	padding-left: 10px;
 }
 
@@ -631,12 +631,35 @@ a:hover {
 }
 
 .detailview_table .detailedViewTextBox, .detailview_table .detailedViewTextBoxOn{
-    -webkit-animation: color-change 1s infinite;
+/*    -webkit-animation: color-change 1s infinite;
     -moz-animation: color-change 1s infinite;
     -o-animation: color-change 1s infinite;
     -ms-animation: color-change 1s infinite;
-    animation: color-change 1s infinite;
+    animation: color-change 1s infinite;*/
 }
+
+div[id^="editarea"] > .save {
+	/* The save button inside the box while editing */
+	width: 50%;
+	margin: 0 0 -0px -5px;
+	border: medium none;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+div[id^="editarea"] > .link {
+	display: inline-block;
+	background-color: #c50008;
+	padding: 5px 0 9px 0;
+	width: 52%;
+	text-align: center;
+	margin: 0 -4px -0px -21px;
+	font-weight: 800;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 0 0 3px 0;
+}
+
 
 .detailedViewTextBoxOn {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -3700,7 +3723,7 @@ select {
 }
 
 /*============= KEYFRAMES ================*/
-@-webkit-keyframes color-change {
+/*@-webkit-keyframes color-change {
     0% { color: black; }
     50% { color: red; }
     100% { color: black; }
@@ -3724,4 +3747,4 @@ select {
     0% { color: black; }
     50% { color: red; }
     100% { color: black; }
-}
+}*/
