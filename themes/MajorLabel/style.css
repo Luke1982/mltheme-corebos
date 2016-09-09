@@ -33,6 +33,8 @@
 /* 	Empty up arrow		: "\e906" 		*/
 /* 	Calendar			: "\e907" 		*/
 /* 	Paperclip			: "\e909" 		*/
+/* 	Action				: "\e90f" 		*/
+/*	Appointment			: "\e90a"		*/
 
 @font-face {
     font-family: 'icomoon';
@@ -699,15 +701,50 @@ a:hover {
 
 .detailview_actionlinks {
 	border-collapse:separate;
-	border-spacing: 0 5px;
+	/*border-spacing: 0 5px;*/
+}
+
+.detailview_actionlinks > tbody > tr:first-child > td:first-child {
+	/* Holds the actionbar title */
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	padding: 8px 0;
+	border-radius: 3px 3px 0 0;
+
+	background: rgba(0,112,168,1);
+	background: -moz-linear-gradient(top, rgba(0,112,168,1) 0%, rgba(0,121,183,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,112,168,1)), color-stop(100%, rgba(0,121,183,1)));
+	background: -webkit-linear-gradient(top, rgba(0,112,168,1) 0%, rgba(0,121,183,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,112,168,1) 0%, rgba(0,121,183,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,112,168,1) 0%, rgba(0,121,183,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,112,168,1) 0%, rgba(0,121,183,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0070a8', endColorstr='#0079b7', GradientType=0 );	
+}
+
+.detailview_actionlinks > tbody > tr:first-child > td:first-child:before {
+	font-family: "icomoon";
+	content: "\e90f";
+	display: inline-block;
+	font-size: 20px;
+	margin-right: 10px;
 }
 
 .actionlink td {
 	padding: 8px !important;
-	background: rgb(230,230,230);
-	border-radius: 5px;
-	color: rgb(120,120,120);
+	/*background: rgb(230,230,230);*/
+	/*border-radius: 5px;*/
+	/*color: rgb(120,120,120);*/
+/*	border-right: 1px solid #0079B7;
+	border-left: 1px solid #0079B7;*/
+	background-color: rgb(250,250,250);
+	border-bottom: 1px solid #0079B7;
 	font-weight: bold;
+}
+
+.actionlink td a {
+	color: #000;
 }
 
 .actionlink td a:first-of-type {
@@ -715,7 +752,7 @@ a:hover {
 	width: 20%;
 	/*padding: 0 5px 8px 5px;*/
 	text-decoration: none;
-	color: rgb(120,120,120);
+	/*color: rgb(120,120,120);*/
 	/*margin: 0 0 8px 0;*/
 }
 
@@ -723,34 +760,49 @@ a:hover {
 	display: inline-block;
 	width: 75%;
 	vertical-align: top;
-	text-align: right;
+	/*text-align: right;*/
 	text-decoration: none;
-	color: rgb(120,120,120);
+	/*color: rgb(120,120,120);*/
 	/*margin: 0 0 8px 0;*/
 	font-size: 13px;
+	margin-top: 5px;
 	text-transform: uppercase;
 }
 
 .actionlink td a:nth-of-type(2n):after {
-	display: inline-block;
-	font-family: "icomoon";
-	font-size: 16px;
-	line-height: 16px;
-	content: "\e906";
-	transform: rotate(90deg);
-	margin: 0 0 0 8px;
+	/*display: inline-block;*/
+	/*font-family: "icomoon";*/
+	/*font-size: 20px;*/
+	/*line-height: 20px;*/
+	/*content: "\e90f";*/
+	/*transform: rotate(90deg);*/
+	/*margin: 0 0 0 8px;*/
 }
 
-.actionlink_sendemail td a:first-of-type img {
+/*.actionlink_sendemail td a:first-of-type img*/
+.actionlink td a:first-of-type img {
 	display: none;
 }
 
-.actionlink_sendemail td a:first-of-type:before {
+.actionlink td a:first-of-type:before {
 	display: inline-block;
 	font-family: "icomoon";
 	font-size: 24px;
 	line-height: 24px;
+	height: 24px;
+}
+
+.actionlink_sendemail td a:first-of-type:before {
 	content: "\e904";
+}
+.actionlink_addevent td a:first-of-type:before {
+	content: "\e90a";
+}
+.actionlink_addtodo td a:first-of-type:before {
+	content: "\e90f";
+}
+.actionlink_customlink td a:first-of-type:before {
+	content: "\e90f";
 }
 
 .advSearch {
