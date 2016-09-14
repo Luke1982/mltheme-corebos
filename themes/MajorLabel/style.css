@@ -37,6 +37,8 @@
 /*	Appointment			: "\e90a"		*/
 /*	Stopwatch			: "\e90b"		*/
 /*	SMS					: "\e90c"		*/
+/*	Cancel				: "\e90d"		*/
+/*	Check				: "\e90e"		*/
 
 @font-face {
     font-family: 'icomoon';
@@ -575,7 +577,7 @@ a:hover {
 	border-right: 1px solid rgb(220,220,220);
 	border-bottom: 1px solid rgb(220,220,220);
 	border-radius: 0 3px 3px 0;
-	padding-left: 10px;
+	padding-left: 5px;
 }
 
 .commentCell {
@@ -638,26 +640,58 @@ a:hover {
     animation: color-change 1s infinite;*/
 }
 
-div[id^="editarea"] > .save {
-	/* The save button inside the box while editing */
+.detailview_ajaxbutton {
+	/* The save and cancel buttons inside the box while editing */
+	/* General classname */
+	display: inline-block;
+	cursor: pointer;
 	width: 50%;
-	margin: 0 0 -0px -5px;
-	border: medium none;
-	box-shadow: none;
-	border-radius: 0;
+	margin-right: -4px;
+	padding: 5px 0;
+	font-weight: 800;
+	text-decoration: none;
+	text-align: center;
+	color: #0079B7;
+	border-top: 1px solid rgb(220,220,220);
+	/*border-top: 1px solid #0079B7;*/
+
+	-webkit-transition: background 300ms ease;
+	-moz-transition: background 300ms ease;
+	-o-transition: background 300ms ease;
+	transition: background 300ms ease;
 }
 
-div[id^="editarea"] > .link {
-	display: inline-block;
-	background-color: #c50008;
-	padding: 5px 0 9px 0;
-	width: 52%;
-	text-align: center;
-	margin: 0 -4px -0px -21px;
-	font-weight: 800;
-	color: #fff;
+.detailview_ajaxbutton:hover {
 	text-decoration: none;
-	border-radius: 0 0 3px 0;
+	background-color: #0079B7;
+	color: #fff;
+}
+
+.ajax_save_detailview {
+	/* The save button inside the box while editing */
+	border-right: 1px solid rgb(220,220,220);
+}
+
+.ajax_save_detailview:before {
+	font-family: "icomoon";
+	margin-right: 5px;
+	content: "\e90e";
+	font-size: 16px;
+	line-height: 16px;
+	display: inline-block;
+}
+
+.ajax_cancelsave_detailview:before {
+	font-family: "icomoon";
+	margin-right: 5px;
+	content: "\e90d";
+	font-size: 16px;
+	line-height: 16px;
+	display: inline-block;
+}
+
+.ajax_cancelsave_detailview {
+
 }
 
 
