@@ -572,6 +572,10 @@ a:hover {
 	transform: translateX(5px);
 }
 
+.mandatory_field_label {
+	border-right: 3px solid #F75D2A;
+}
+
 .dvtCellInfo, .cellInfo {
 	border-top: 1px solid rgb(220,220,220);
 	border-right: 1px solid rgb(220,220,220);
