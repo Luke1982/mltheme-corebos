@@ -479,7 +479,7 @@ a:hover {
 .detailview_table, .createview_table {
 	/*http://stackoverflow.com/questions/351058/space-between-two-rows-in-a-table*/
 	border-collapse:separate;
-	border-spacing: 0 5px;
+	border-spacing: 4px 6px;
 }
 
 .dvtSelectedCell {
@@ -557,19 +557,23 @@ a:hover {
 
 .detailview_row {
 	transform: translateX(-3px);
+
 }
 
 .dvtCellLabel, .cellLabel, .cellLabelnew{
-	background-color: white;
+	/*background-color: white;*/
 	color: rgb(30,30,30);
 	padding: 10px 8px;
 	white-space:nowrap;
 	font-weight: bold;
-	background: rgb(240,240,240);
-	border-right: 3px solid #68b8e1;
+	background: rgb(245,245,245);
+	/*border-right: 3px solid rgb(225,225,225);*/
+	/*border-right: 3px solid #68b8e1;*/
+	border-top: 1px solid rgb(245,245,245);
+	border-bottom: 1px solid rgb(215,215,215);
 	/*border-left: 10px solid white;*/
-	border-radius: 3px 0 0 3px;
-	transform: translateX(5px);
+	border-radius: 3px 0 0 0;
+	transform: translateX(3px);
 }
 
 .mandatory_field_label {
@@ -579,17 +583,17 @@ a:hover {
 .dvtCellInfo, .cellInfo {
 	border-top: 1px solid rgb(220,220,220);
 	border-right: 1px solid rgb(220,220,220);
-	border-bottom: 1px solid rgb(220,220,220);
-	border-radius: 0 3px 3px 0;
-	padding-left: 5px;
+	border-bottom: 1px solid rgb(215,215,215);
+	border-radius: 0 3px 0 0;
+	/*padding-left: 5px;*/
 }
 
 .commentCell {
 	border-top: none;
-	border-right: 2px solid rgb(230,230,230);
-	border-bottom: 2px solid rgb(230,230,230);
-	border-left: 2px solid rgb(230,230,230);
-	border-radius: 0 0 7px 7px;
+	border-right: 2px solid rgb(220,220,220);
+	border-bottom: 2px solid rgb(220,220,220);
+	border-left: 2px solid rgb(220,220,220);
+	border-radius: 0 0 3px 3px;
 	padding: 0;
 }
 
@@ -623,25 +627,22 @@ a:hover {
 	text-transform: uppercase;
 }
 
-.detailedViewTextBox {
+.detailedViewTextBox, .detailedViewTextBoxOn {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #000000;
 	/*border:1px solid #bababa;*/
 	/*padding-left:5px;*/
-	width:98%;
+	width:97%;
 	border: none;
-	margin: 0;
+	margin: 0 0 0 3%;
 	padding: 4px 0;
 	/*background-color:#ffffdd;*/
 }
 
 .detailview_table .detailedViewTextBox, .detailview_table .detailedViewTextBoxOn{
-/*    -webkit-animation: color-change 1s infinite;
-    -moz-animation: color-change 1s infinite;
-    -o-animation: color-change 1s infinite;
-    -ms-animation: color-change 1s infinite;
-    animation: color-change 1s infinite;*/
+	padding: 4px 0 4px 10px;
+	background: none;
 }
 
 .detailview_ajaxbutton {
@@ -683,6 +684,7 @@ a:hover {
 	font-size: 16px;
 	line-height: 16px;
 	display: inline-block;
+	color: #00b71e;
 }
 
 .ajax_cancelsave_detailview:before {
@@ -692,6 +694,7 @@ a:hover {
 	font-size: 16px;
 	line-height: 16px;
 	display: inline-block;
+	color: #c50008;
 }
 
 .ajax_cancelsave_detailview {
@@ -700,15 +703,15 @@ a:hover {
 
 
 .detailedViewTextBoxOn {
-	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+/*	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 13px;
-	color: #000000;
+	color: #000000;*/
 	/*border:1px solid #bababa;*/
 	/*padding-left:5px;*/
-	width:98%;
+/*	width:98%;
 	border: none;
 	margin: 0;
-	padding: 4px 0;
+	padding: 4px 0;*/
 	/*background-color:#ffffdd;*/
 }
 
