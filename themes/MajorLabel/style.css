@@ -2746,6 +2746,7 @@ textarea {
 	position:absolute;
 	background-color:#FFFFFF;
 	display:none;
+	z-index: 1;
 }
 
 .TaxShow{
