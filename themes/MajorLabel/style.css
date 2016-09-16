@@ -1914,7 +1914,11 @@ td.small {
 }
 
 #LB_SearchButtonFaded,
-#LB_FindDuplButtonFaded {
+#LB_FindDuplButtonFaded,
+#LB_AddButtonFaded,
+#LB_CalButtonFaded,
+#LB_ImportButtonFaded,
+#LB_ExportButtonFaded {
 	display: none; /* Why show it? It's faded! */
 }
 
