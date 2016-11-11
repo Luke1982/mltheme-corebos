@@ -2921,6 +2921,7 @@ textarea {
 	border:2px solid #ddd;
 	background:#fffff5 url(images/layerPopupBg.gif) ;
 	position:absolute;
+	z-index: 2;
 }
 
 .layerPopupHeading {
