@@ -3889,7 +3889,6 @@ select {
     50% { color: red; }
     100% { color: black; }
 }*/
-
 #LB_TaskIcon img {
 	background-color: #4bc076;
 	width: 28px;
@@ -3994,4 +3993,3 @@ select {
 	width: 100%;
 	display: block;
 }
-
